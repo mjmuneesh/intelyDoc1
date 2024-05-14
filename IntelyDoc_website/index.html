@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="./style.css" rel="stylesheet"></link>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+  <style>
+
+    /* sections */
+    .welcoming{
+      /* margin-top:80px; */
+      padding-top: 90px;
+      height: 80vh;
+      width: 100%;
+    }
+
+    .connect_btn,.request_demo_btn,.tour_btn,.menu_btn,.schedule_btn{
+      border-radius: 25px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .menu_btn{
+      color:var(--background_dark);
+      margin-left: 1rem;
+    }
+
+    .request_demo_btn,.tour_btn{
+      border-color:var(--background_dark);
+      color:var(--background_dark);
+    }
+    .request_demo_btn:hover,.tour_btn:hover{
+      background-color:var(--background_light);
+      color:#fff;
+    }
+    .tour_btn{
+      margin-left: 5%;
+    }
+    .connect_btn{
+      position: absolute;
+      top:5px;
+      right: 5px;
+      background:var(--background_dark);
+      color: #fff;
+      /* transition: transform 0.3s ease; */
+    }
+
+    .connect_btn:hover{
+      background: var(--background_light);
+      color: #fff;
+      /* transform: scale(1.1); */
+    }
+    .search_box{
+      width:80%;
+      position: relative;
+    }
+
+    .search_box_footer{
+      width: 50%;
+      position: relative;
+    }
+    .search{
+      /* width:100%; */
+      padding: .7rem 1rem;
+      border-radius:25px;
+    }
+    
+    .official_id{
+      padding: .5rem 1rem;
+    }
+
+
+    .title {
+      font-size: 50px;
+    }
+
+    .section_title{
+      font-size: 50px;
+    }
+    .tag_line{
+      font-size: 5.7rem;
+      font-weight: 800;
+    }
+
+    .value_para{
+      font-size: 28px;
+    }
+
+    .head_line{
+      font-size: 50px;
+      font-weight: 780;
+    }
+
+    .section_para{
+        font-size: 20px;
+    }
+    .para{
+        font-size: 18px;
+    }
+
+    .challenges{
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .challenges1{
+      height: 93vh;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+    .accordion-item{
+      border-left:0;
+      border-right: 0;
+    }
+
+    .accordion-button {
+      background-color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .accordion-button:focus {
+    box-shadow: none;
+    background-color: #fff;
+    }
+
+    .accordion-button:not(:focus) {
+    background-color: #fff;
+    }
+
+    .load_text{
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .load_text a{
+      text-decoration: none;
+      color: #000;
+    }
+
+    /*  jumbo */
+    /* section 2*/
+    .consultation{
+      height: 65vh;
+      margin-top: 2rem;
+    }
+    .consultation .container{
+        width: 71%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        padding:4rem 0;
+        /* background-color: var(--background_dark); */
+      }
+
+.jumbotron {
+  width:91%;
+  border-radius: 20px;
+  background-color: var(--background_light);
+  color: #fff;
+  }
+.jumbotron h1{
+font-size: 40px;
+font-weight: 800;
+}
+.jumbotron p{
+    font-size:18px;
+}
+
+.schedule_btn{
+      background: #fff;
+      color: var(--background_dark);
+      font-size: large;
+    }
+
+    .schedule_btn:hover{
+      background: #fff;
+      color: var(--background_dark);
+    }
+
+    .card{
+      background: transparent;
+      width:550px;
+      height: 360px;
+      position: relative;
+      overflow: hidden;
+      /* color: #fff; */
+    }
+    .card img{
+      position: absolute;
+      /* height:800px; */
+      width:100%;
+    object-fit: inherit;
+    }
+    .overlay_text{
+      color: #fff;
+      height:100%;
+      width: 100%;
+      position: absolute;
+      bottom:-140%; 
+      left: 0;
+      padding: 3rem 2rem;
+      transition:.4s linear;
+}
+.overlay_title{
+  color: #fff;
+  height:100%;
+  width: 100%;
+  position: absolute;
+  bottom:-40%;
+  padding: 3rem 2rem;
+  transition:.4s linear;
+}
+
+.card:hover .overlay_title{
+  bottom:100%;
+}
+.card_pare{
+  position: absolute;
+  bottom: 0;
+}
+.card:hover .overlay_text{
+  bottom:0%;
+}
+
+.retail{
+background-color: #197976;
+}
+
+.finance{
+  background-color: #3a7252;
+}
+.healthcare{
+  background-color: #533a72;
+}
+.legal{
+  background-color: #72503a;
+}
+.education{
+background-color: #3a4b72;
+}
+
+.usecasesSection{
+  background-color: var(--background_dark);
+  color: #fff;
+}
+
+.application_title{
+  /* font-size: 16px; */
+  font-weight: 600;
+}
+.point1{
+  margin-bottom: 6px;
+
+}
+.points{
+font-weight: 700;
+padding-bottom: 1rem;
+}
+
+.use_line{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.use_line h1{
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+/* video */
+.video_div{
+  position: relative;
+}
+.video_div i{
+  position: absolute;
+  color: #fff;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.video_content{
+padding-left: 4rem;
+}
+.wave{
+  position: absolute;
+  left: 0;
+  bottom: -0.5px;
+}
+
+.wave_bottom{
+  margin-bottom: -3%;
+}
+
+
+     
+      
+
+    @media screen and (max-width:991px) {
+      .title {
+        font-size: 40px;
+      }
+      .wave{
+        margin-top: -50px;
+      }
+
+    }
+    @media screen and (max-width:767px) {
+      .wave {
+        display: none;
+        bottom: 0;
+      }
+
+      .wave_bottom{
+        display: none;
+    }
+
+      .welcoming{
+        padding-top: 110px;
+        padding-bottom: 2rem;
+        height: auto;
+      }
+
+      .consultation{
+        margin-bottom: 0;
+      }
+
+    }
+  </style>
+  </head>
+
+  <body>
+
+
+    <header class="background">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top py-3">
+          <div class="container-fluid nav_container">
+            <a class="navbar-brand" href="#">IntelyDoc</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="collapsibleNavbar"
+            >
+              <ul class="navbar-nav">
+                <!-- <li class="nav-item px-4">
+                  <a class="nav-link header_link" href="./index.html">Home</a>
+                </li> -->
+               
+                <li class="nav-item px-1">
+                  <a class="nav-link header_link" href="#contactUs">Contact Us</a>
+                </li>
+                <li class="nav-item px-1">
+                  <a class="nav-link header_link" href="#faq">FAQs</a>
+                </li>
+                <li class="nav-item px-1">
+                  <a class="nav-link header_link" href="https://www.intelydoc.com/login">Login</a>
+                </li>
+              </ul>
+             <a href="mailto:support@intelydoc.com"> <button class="btn btn-light menu_btn" type="button">Schedule Demo</button></a>
+            </div>
+          </div>
+        </nav>
+
+        <section class="welcoming" >
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 d-flex justify-content-center align-items-center pt-5">
+                <div>
+                  <h1 class="title pb-2" >
+                      <!-- The Future Of <br>Document Processing <br>With IntelyDoc  -->
+                      The Future of <br>Hyperintelligent Document Processing - IntelyDoc
+                  </h1>
+                  <p class="para">
+                    <!-- The cutting-edge Intelligent Document Processing platform.   -->
+                    Smartify, Simplify, Transform, Empower
+                    </p>
+                  <div class=" mt-5 search_box">
+                    <input type="text" class="form-control search" placeholder="Work e-mail address*">
+                    <a href="mailto:support@intelydoc.com"> <button class="btn connect_btn px-4">Schedule Demo <i class="fa-solid fa-arrow-right-long"></i></button></a>
+                  </div>
+                  <!-- <p class="official_id">Please enter an official email ID</p> -->
+                </div>
+              </div>
+  
+              <div class="col-md-6 d-flex justify-content-center align-items-center pt-4">
+                <img
+                  class="img-fluid"
+                  width="80%"
+                  src="./images/banner.png"
+                />
+
+             </div>
+            </div>
+          </div>
+        </section>
+
+
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave">
+            <path fill="#fff" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,234.7C960,213,1056,171,1152,170.7C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>    -->
+
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave">
+              <path fill="#fff" fill-opacity="1" d="M0,160L60,176C120,192,240,224,360,224C480,224,600,192,720,202.7C840,213,960,267,1080,266.7C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg> -->
+
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave">
+              <path fill="#fff" fill-opacity="1" d="M0,96L34.3,128C68.6,160,137,224,206,245.3C274.3,267,343,245,411,245.3C480,245,549,267,617,261.3C685.7,256,754,224,823,224C891.4,224,960,256,1029,277.3C1097.1,299,1166,309,1234,314.7C1302.9,320,1371,320,1406,320L1440,320L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+            </svg> -->
+
+            
+
+          </header>
+    <main>
+
+      <section class="challenges">
+        <div class="container pt-4 pb-3">
+          <div class="row">
+            <div class="col-12 text-center" >
+                    <h1 class="tag_line">
+                      <!-- Revolutionize -->
+                      Rise of AI
+                    </h1>
+                    <p class="value_para pt-1 px-5">
+                      <!-- IntelyDoc is a state-of-the-art Intelligent Document Processing platform developed by AARK Global. 
+                      It harnesses the power of artificial intelligence to automate document-handling tasks, ensuring unmatched accuracy and efficiency.  -->
+                      Where the power of cutting-edge AI meets the efficiency of seamless document management. Join us on the journey from paper to pixels and beyond, where every document becomes a gateway to smarter decision-making and enhanced productivity. 
+                    </p>
+                
+                </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="overview py-5">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-12 text-center" >
+                    <h1 class="head_line">Revolutionize Document Processing with AI</h1> 
+              </div>
+              <div class="col-md-6 text-center">
+                <img src="./images/video.png" width="90%">
+              </div>
+              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div>
+                  <h1 class="head_line">Revolutionize Document Processing with AI</h1> 
+                  <p class=" section_para pt-4">
+                    IntelyDoc is a state-of-the-art Intelligent Document Processing platform developed by AARK Global. 
+                    It harnesses the power of artificial intelligence to automate document-handling tasks, ensuring unmatched accuracy and efficiency. 
+                </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section> -->
+
+     
+      <section class="workflow">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1 class="text-center section_title" >
+                <!-- Workflow of IntelyDoc<br>
+                Streamlined Document Analysis -->
+                Inside the IntelyDoc Workflow  
+              </h1>
+              <p class="text-center section_para pt-2">
+                <!-- Discover effortless document uploading, precise searching, and
+                seamless exporting in JSON format -->
+                Unlock the power of GenAI to streamline operations seamlessly within <br>IntelyDoc's intuitive workflow, optimizing efficiency at every step. 
+              </p>
+              <!-- <p class="text-center">Explore results in search and export json results</p> -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col d-flex justify-content-center pt-2">
+              <!-- <img src="https://images.prismic.io/vueai/8742e0dc-2eb7-46f4-be62-133761c73539_idp-banner.png?auto=compress%2Cformat&fit=max&w=3840" width="85%"/> -->
+            <img src="./images/Workflow.svg" width="85%" height="95%">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="challenges1">
+        <div class="container pt-4 pb-3">
+          <div class="row">
+            <div class="col-12 text-center" >
+                    <h1 class="tag_line"> 99% Accuracy</h1>
+                    <h2>for handwritten documents, guaranteed! </h2>
+                    <p class="value_para pt-1 px-5">
+                      <!-- IntelyDoc is not just a tool, it's a solution to your document processing challenges. 
+                      It's the key to unlocking efficiency and productivity in your organization. -->
+                      IntelyDoc goes beyond mere tools; it's a comprehensive solution to your document processing headache. It is a key to unlocking efficiency and productivity <br>within your organization's operations. 
+                    </p>
+                
+                </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featuresSection">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-7 pb-5 px-0">
+              <div style="background-color: var(--background_light);width: 95%;height: 550px;">
+                <h2 class="text-white p-4">Unveiling the Power-Packed Features</h2>
+                <div class="d-flex justify-content-center align-items-center">
+                  <img id="feature_img" src="./images/efficiency.png" class="" width="90%" height="400px">
+                </div>
+           
+              </div>
+
+              <!-- <img class="" src="./images/back.avif" width="95%" height="500px"> -->
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <div class="col-12">
+              <h5 style="cursor: pointer;" id="efficiency">Efficiency</h5>
+              <h5 style="cursor: pointer;" id="accuracy">Accuracy</h5>
+              <h5 style="cursor: pointer;" id="versatility">Versatility</h5>
+              <h5 style="cursor: pointer;" id="integration">Integration</h5>
+              <h5 style="cursor: pointer;" id="flexible">Flexible</h5>
+              <h5 style="cursor: pointer;" id="tagging">Image Processing, Metadata Tagging</h5>
+
+                </div>
+                <div class="col-12 pt-5 mt-3">
+                  <h3 id="feature_title">Efficiency</h3>
+                  <h5 id="feature_content" style="font-size: 18px;">Say goodbye to manual data entry and tedious document processing. IntelyDoc automates repetitive tasks, saving time and resources.</h5>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="usecasesSection">
+        <div class="container pb-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="use_line">
+                <h1 class="text-center ">
+                  Unlocking Possibilities:
+                  <br>Real-world Applications
+                </h1>
+              </div>
+              <!-- <p class="text-center para pt-2">
+                The significant impact of Intelligent Document Processing can have across diverse industries, leading to increased <br>efficiency, cost savings, and improved resource allocation.
+              </p> -->
+              <!-- <p class="text-center">Explore results in search and export json results</p> -->
+            </div>
+
+
+            <div class="col-12">
+              <div class="card my-4 " style="margin-right: 5rem;">
+                <img class="" src="./images/finance.png" alt="Card image">
+                <div class="overlay_title finance">
+                  <div>
+                    <h4 class="points">Finance</h4>
+                    <p class="card-text">Streamline loan application processing by efficiently extracting and analyzing relevant information from diverse financial documents, ensuring compliance and accelerating decision-making.</p>
+                  </div>
+
+                </div> 
+                <div class="overlay_text finance">
+                  <h4 class="points">Loan Application Processing</h4>
+                  <!-- <p class="card-text">Simplify medical record management by automating the extraction of patient data from clinical notes, prescriptions, and reports, enhancing accuracy and enabling faster patient care.</p> -->
+                  	<p class="point1"><span class="application_title">Time Saved:</span> Reduce processing time by up to 70%.</p>
+                  	<p class="point1"><span class="application_title">Cost Saved:</span> Lower operational costs by 50% through automation.</p>
+                  	<p  class="point1"><span class="application_title">Efforts Saved:</span> Decrease manual effort by 80% in data extraction and verification.</p> 
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <div class="card my-4 float-end" style="margin-right: 5rem;">
+                <img class="" src="./images/healthcare.png" alt="Card image">
+                <div class="overlay_title healthcare">
+                  <div>
+                    <h4 class="points">Healthcare</h4>
+                    <p class="card-text">Simplify medical record management by automating the extraction of patient data from clinical notes, prescriptions, and reports, enhancing accuracy and enabling faster patient care.</p>
+                  </div>
+
+                </div> 
+                <div class="overlay_text healthcare">
+                  <h4 class="points">Medical Record Management</h4>
+                  <!-- <p class="card-text">Simplify medical record management by automating the extraction of patient data from clinical notes, prescriptions, and reports, enhancing accuracy and enabling faster patient care.</p> -->
+                  	<p class="point1"><span class="application_title">Time Saved:</span> Expedite record retrieval by 60%, leading to faster patient care.</p>
+                  	<p class="point1"><span class="application_title">Cost Saved:</span> Cut administrative costs by 40% through streamlined processes.</p>
+                  	<p class="point1"><span class="application_title">Efforts Saved:</span> Reduce manual data entry tasks by 75%, freeing up staff for patient interaction.</p> 
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="card my-4 " style="margin-right: 5rem;">
+                <img class="" src="./images/legal.png" alt="Card image">
+                <div class="overlay_title legal">
+                  <div>
+                    <h4 class="points">Legal</h4>
+                    <p class="card-text">Expedite contract review processes by automatically extracting key clauses, terms, and obligations from legal documents, reducing manual effort and mitigating risk.</p>
+                  </div>
+
+                </div> 
+                <div class="overlay_text legal">
+                  <h4 class="points">Contract Review Processes</h4>
+                  <!-- <p class="card-text">Simplify medical record management by automating the extraction of patient data from clinical notes, prescriptions, and reports, enhancing accuracy and enabling faster patient care.</p> -->
+                  	<p class="point1"><span class="application_title">Time Saved:</span> Accelerate review cycles by 50%, enabling quicker contract approvals.</p>
+                  	<p class="point1"><span class="application_title">Cost Saved:</span> Decrease legal expenses by 30% due to reduced review hours.</p>
+                  	<p class="point1"><span class="application_title">Efforts Saved:</span> Minimize manual review efforts by 70%, allowing legal teams to focus on strategic tasks.</p> 
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="card my-4 float-end" style="margin-right: 5rem;">
+                <img class="" src="./images/Retail.png"alt="Card image">
+                <div class="overlay_title retail">
+                  <div>
+                    <h4 class="points">Retail</h4>
+                    <p class="card-text">Enhance supply chain efficiency by automating invoice processing, accurately extracting product information, prices, and payment terms, facilitating smoother transactions and inventory management.</p>
+                  </div>
+
+                </div> 
+                <div class="overlay_text retail">
+                  <h4 class="points">Invoice Processing</h4>
+                  <!-- <p class="card-text">Simplify medical record management by automating the extraction of patient data from clinical notes, prescriptions, and reports, enhancing accuracy and enabling faster patient care.</p> -->
+                  	<p class="point1"><span class="application_title">Time Saved:</span> Shorten processing time by 80%, enabling faster payment cycles.</p>
+                  	<p class="point1"><span class="application_title">Cost Saved:</span> Lower processing costs by 60% through automation.</p>
+                  	<p class="point1"><span class="application_title">Efforts Saved:</span>Eliminate manual data entry tasks by 90%, reducing human error and rework.</p> 
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="card my-4 " style="margin-right: 5rem;">
+                <img class="" src="./images/education.png" alt="Card image">
+                <div class="overlay_title education">
+                  <div>
+                    <h4 class="points">Education</h4>
+                    <p class="card-text">Accelerate student admissions by automating the processing of application forms, transcripts, and recommendation letters, ensuring prompt decision-making and improving the overall applicant experience.</p>
+                  </div>
+
+                </div> 
+                <div class="overlay_text education">
+                  <h4 class="points">Student Admissions</h4>
+                  <!-- <p class="card-text">Simplify medical record management by automating the extraction of patient data from clinical notes, prescriptions, and reports, enhancing accuracy and enabling faster patient care.</p> -->
+                  	<p class="point1"><span class="application_title">Time Saved:</span> Expedite admissions process by 50%, reducing wait times for applicants.</p>
+                  	<p class="point1"><span class="application_title">Cost Saved:</span> Decrease administrative costs by 40% through streamlined workflows.</p>
+                  	<p class="point1"><span class="application_title">Efforts Saved:</span> Reduce manual data entry tasks by 70%, enabling admissions staff to focus on applicant engagement.</p> 
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+  
+      <section class="demovideo pt-5 mt-5">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="col-lg-6 px-0 d-flex justify-content-center align-items-center video_div">
+              <!-- <video src="./images/Intelydoc_Final.mp4"  class="rounded" width="650" height="400"></video> -->
+           <img src="./images/home.png" width="100%" height="520px" class="home">
+            <!-- <iframe width="700" height="400" src="./images/Intelydoc_Final.mp4" frameborder="0" allowfullscreen></iframe> -->
+            <i class="fa-solid fa-circle-play"></i> 
+          </div>
+            <div class="col-lg-6 d-flex justify-content-center align-items-center pt-md-5 pt-lg-0">
+              <div class="video_content">
+                <h1>IntelyDoc: Transforming Data with the Power of AI</h1>
+                <p class="para py-3 mb-0">Experience a demo today and witness firsthand how our platform leverages cutting-edge AI technologies to refine your document processing workflows, liberating valuable time, resources, and frustrations. 
+                </p>
+                <p class="">Sign up for a demo today and see how our platform can streamline your document processing workflows, saving you time, resources, and headaches.</p>
+                <br>
+                <a href="mailto:support@intelydoc.com"><button class="btn request_demo_btn px-4 py-2">Schedule Demo</button></a>
+                <button class="btn tour_btn px-4 py-2">Take A Tour</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      <section class="faqSection pt-5" id="faq">
+        <div class="container py-5 mt-4">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="text-center">Frequently Asked Questions</h1>
+              </div>
+              <div class="col-12 pt-5">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                        What is Intelligent Document Processing (IDP)?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                      <div class="accordion-body">
+                        IDP is a technology solution that combines machine learning, natural language processing, and optical character recognition (OCR) to automate the processing and extraction of data from unstructured documents.​
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        How does IntelyDoc works?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                      <div class="accordion-body">
+                        IntelyDoc utilizes advanced algorithms to analyze and interpret unstructured data within documents such as invoices, forms, contracts, and emails. It extracts relevant information, converts it into structured data, and integrates it into business workflows or systems.​
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        What types of documents can IntelyDoc process?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                      <div class="accordion-body">
+                        IntelyDoc can process a wide range of documents including invoices, purchase orders, receipts, contracts, resumes, insurance forms, medical records, and more.​
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        What are the benefits of using IntelyDoc?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                      <div class="accordion-body">
+                        Following are some of the main benefits of adopting IntelyDoc IDP:
+                        Increased efficiency by automating manual data entry tasks.​
+                        Improved accuracy and reduced errors compared to manual processing.​
+                        Enhanced compliance through consistent and auditable document processing.​
+                        Faster decision-making with timely access to extracted data.​
+                        Scalability to handle large volumes of documents without proportional resource increase
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                        Is IntelyDoc suitable for businesses of all sizes?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                      <div class="accordion-body">
+                        Yes, IntelyDoc can be tailored to suit businesses of all sizes, from small startups to large enterprises. We offer scalable solutions that can adapt to the document processing needs of different organizations.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="load_more d-none">
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                        What level of customization is available with IDP?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                      <div class="accordion-body">
+                        IntelyDoc solutions can be customized to meet specific business requirements, including data extraction rules, validation processes, and workflow automation. Customization options ensure that the solution aligns with the unique needs and workflows of each organization.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                        How secure is the data processed by IDP?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                      <div class="accordion-body">
+                        IntelyDoc prioritizes data security and compliance. We employ encryption, access controls, and other security measures to safeguard sensitive information during processing and transmission. Compliance with industry regulations such as GDPR, HIPAA, and PCI-DSS is also ensured.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+                        What is the implementation process for IDP?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+                      <div class="accordion-body">
+                        The implementation process typically involves assessment, configuration, testing, and deployment phases. A team of experts works closely with the organization to understand requirements, configure the solution, conduct testing, and ensure a smooth deployment process.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+                       How does IntelyDoc handle exceptions or errors in document processing?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+                      <div class="accordion-body">
+                        IntelyDoc includes error handling mechanisms to address exceptions or errors encountered during document processing. It can flag inconsistencies for manual review or trigger automated workflows for resolution, depending on the configuration.
+                    </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
+                        What kind of support and training is available for users of IntelyDoc?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTen">
+                      <div class="accordion-body">
+                        IntelyDoc providers offer comprehensive support services, including training, documentation, and technical assistance. Training programs are tailored to users' roles and proficiency levels to ensure effective utilization of the IDP solution.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="false" aria-controls="panelsStayOpen-collapseEleven">
+                        Can IntelyDoc be used for industry specific applications?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEleven">
+                      <div class="accordion-body">
+                        Yes, IntelyDoc can be customized for various industry verticals, including finance, healthcare, legal, insurance, and more. Industry-specific configurations ensure that the solution meets the unique document processing requirements of each sector.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwelve">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwelve" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwelve">
+                        What is the return on investment (ROI) of implementing IntelyDoc?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwelve">
+                      <div class="accordion-body">
+                        The ROI of IntelyDoc varies depending on factors such as document volume, processing efficiency gains, error reduction, and labor cost savings. Organizations typically experience significant ROI through increased productivity, reduced operational costs, and improved accuracy in data processing.​
+                    </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThirteen">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThirteen" aria-expanded="false" aria-controls="panelsStayOpen-collapseThirteen">
+                        How can i get started with implementing IntelyDoc for my organization?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThirteen">
+                      <div class="accordion-body">
+                        To get started with implementing IntelyDoc, you can contact IntelyDoc providers or consultants for a consultation and assessment of your document processing needs. They will guide you through the process of selecting, configuring, and deploying an IntelyDoc solution tailored to your organization's requirements.​
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <h5 class="mt-4 px-4 text-center load_text"><a href="#faq"><span class="switch">Show More</span></a></h5>
+              </div>
+            </div>
+        </div>
+      </section> 
+
+      <section class="consultation" id="contactUs">
+        <div class="container px-3">
+            <div class="row jumbotron p-5">
+              <div class="col-12">
+                <h1>Get a customized demo with your documents</h1>
+                <p class="pt-4">Book a consultation with our experts.</p>
+                <div class=" mt-5 search_box_footer">
+                  <input type="text" class="form-control search" placeholder="Work e-mail address*">
+                  <a href="mailto:support@intelydoc.com"> <button class="btn connect_btn px-4">Schedule Demo <i class="fa-solid fa-arrow-right-long"></i></button></a>
+                </div>
+                <!-- <p class="text-center">With IntelyDoc, the possibilities are endless.<br>Experience the future of document processing today! </p> -->
+              </div>
+              <!-- <div class="col-4 d-flex align-items-center ">
+                <button class="btn schedule_btn px-4 py-2">Schedule Demo  <i class="fa-solid fa-arrow-right-long"></i></button>
+              </div> -->
+            </div>
+        </div>
+      </section> 
+
+    </main>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave_bottom">
+      <path fill="#012133" fill-opacity="1" d="M0,160L60,176C120,192,240,224,360,224C480,224,600,192,720,202.7C840,213,960,267,1080,266.7C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg> -->
+    
+         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave_bottom">
+            <path fill="#012133" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,234.7C960,213,1056,171,1152,170.7C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>    -->
+
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave_bottom">
+        <path fill="#012133" fill-opacity="1" d="M0,96L34.3,128C68.6,160,137,224,206,245.3C274.3,267,343,245,411,245.3C480,245,549,267,617,261.3C685.7,256,754,224,823,224C891.4,224,960,256,1029,277.3C1097.1,299,1166,309,1234,314.7C1302.9,320,1371,320,1406,320L1440,320L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+      </svg> -->
+
+    <footer class="footer py-4 px-3">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3 class="py-3">IntelyDoc</h3>
+            <p class="fw-bold mb-0">General Inquiries</p>
+            <ul class="inquiries">
+              <li>9876543210</li>
+              <li>support@intelydoc.com</li>
+            </ul>
+          </div>
+          <div class="col-sm-8">
+            <ul class="nav justify-content-center pt-5">
+              <li class="nav-item">
+                <a class="nav-link footer_link" href="https://www.intelydoc.com/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link footer_link" href="#contactUs">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link footer_link" href="#faq">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <hr>
+            <h5 class="text-center mb-0">© AARK Global Inc. All Rights Reserved</h5>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+$(document).ready(function(){
+        // Toggle function for "Load more" button
+        $('.load_text').click(function(){
+            $('.load_more').toggleClass('d-none d-normal');
+            var text = $('.switch').text();
+            $('.switch').text(text == "Show More" ? "Show Less" : "Show More");
+            $('.load_text i').toggleClass('fa-angle-down fa-angle-up');
+        });
+
+
+    });
+
+    let efficiency=document.getElementById('efficiency');
+    let accuracy=document.getElementById('accuracy');
+    let versatility=document.getElementById('versatility');
+    let integration=document.getElementById('integration');
+    let flexible=document.getElementById('flexible');
+    let tagging=document.getElementById('tagging');
+    let feature_title=document.getElementById('feature_title');
+    let feature_content=document.getElementById('feature_content');
+    let feature_img=document.getElementById('feature_img');
+
+function reset(){
+      efficiency.style.color="#000";
+      efficiency.style.fontWeight="500";
+      accuracy.style.color="#000";
+      accuracy.style.fontWeight="500";
+      versatility.style.color="#000";
+      versatility.style.fontWeight="500";
+      integration.style.color="#000";
+      integration.style.fontWeight="500";
+      flexible.style.color="#000";
+      flexible.style.fontWeight="500";
+      tagging.style.color="#000";
+      tagging.style.fontWeight="500";
+}
+    efficiency.addEventListener('click',function(){
+      reset();
+      efficiency.style.color="#197976";
+      efficiency.style.fontWeight="600";
+      feature_title.innerHTML="Efficiency";
+      feature_content.innerHTML="Say goodbye to manual data entry and tedious document processing. IntelyDoc automates repetitive tasks, saving time and resources.";
+      feature_img.setAttribute('src','./images/efficiency.png');
+    })
+
+    accuracy.addEventListener('click',function(){
+      reset();
+      accuracy.style.color="#197976";
+      accuracy.style.fontWeight="600";
+      feature_title.innerHTML="Accuracy";
+      feature_content.innerHTML=" With a remarkable 100% accuracy rate for handwritten documents, you can trust IntelyDoc to handle your data with precision.";
+      feature_img.setAttribute('src','./images/accuracy.png');
+    })
+
+    versatility.addEventListener('click',function(){
+      reset();
+      versatility.style.color="#197976";
+      versatility.style.fontWeight="600";
+      feature_title.innerHTML="Versatility";
+      feature_content.innerHTML="From multilingual documents to template-agnostic processing, IntelyDoc adapts to your specific requirements seamlessly.";
+      feature_img.setAttribute('src','./images/efficiency.png');
+    })
+
+    integration.addEventListener('click',function(){
+      reset();
+      integration.style.color="#197976";
+      integration.style.fontWeight="600";
+      feature_title.innerHTML="Integration";
+      feature_content.innerHTML="IntelyDoc offers APIs for smooth integration with existing systems, enabling effortless upward and downward data flow.";
+      feature_img.setAttribute('src','./images/accuracy.png');
+    })
+
+    flexible.addEventListener('click',function(){
+      reset();
+      flexible.style.color="#197976";
+      flexible.style.fontWeight="600";
+      feature_title.innerHTML="Flexible";
+      feature_content.innerHTML="Receive output in any format you prefer, including XML, Excel, JSON, PDF, or any other format, ensuring compatibility with your existing systems and processes.";
+      feature_img.setAttribute('src','./images/efficiency.png');
+    })
+
+    tagging.addEventListener('click',function(){
+      reset();
+      tagging.style.color="#197976";
+      tagging.style.fontWeight="600";
+      feature_title.innerHTML="Image Processing and Metadata Tagging";
+      feature_content.innerHTML="IntelyDoc goes beyond text-based documents, seamlessly processing images and intelligently tagging metadata to enhance organization and retrieval efficiency.";
+      feature_img.setAttribute('src','./images/accuracy.png');
+    })
+
+  AOS.init();
+
+    </script>
+  </body>
+</html>

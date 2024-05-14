@@ -1,0 +1,122 @@
+/* :root{
+  --background_light:#00a6a4;
+  --background_dark:#084a49;
+} */
+
+/* :root {
+  --background_light: #1b6488;
+  --background_dark: #012133;
+} */
+
+:root {
+  --background_light:#197976;
+    /* --background_light: #1b6488; */
+    --background_dark: #002233;
+  }
+  
+  *{
+    font-family:  "CoFoGothic", sans-serif;
+  }
+
+  body{
+    background: var(--background_dark);
+    color: #fff;
+  }
+  .background {
+    /* background: radial-gradient(rgb(27, 100, 136), rgb(1, 33, 51)); */
+    background: var(--background_dark);
+    /* background-color: red; */
+    color: #ffffff;
+  }
+  
+  /* navbar */
+  .nav_container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navbar {
+    background: var(--background_dark);
+    color: #fff;
+  }
+  .navbar-brand {
+    font-size: 26px;
+  }
+  
+  .header_link {
+    padding: 2px;
+    border-radius: 20px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  /* .header_link:hover {
+    background: #fff;
+    color: var(--background_light);
+  } */
+  
+  /* footer */
+  .footer {
+    background: var(--background_dark);
+    color: #fff;
+  }
+  
+  .footer_link {
+    font-size: large;
+    margin-right: 2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .footer_link:hover {
+    color: #fff;
+  }
+  
+  .footer h5 {
+    font-size: 18px;
+  }
+  .inquiries {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  
+  
+  
+  /* review */
+  
+  
+  .r-heading{
+    color:#fff;
+    font-size: 3.5rem;
+    padding-top: 2rem;
+    text-align: center;
+    letter-spacing: .2rem;
+  }
+  
+  .review{
+    background: url(./images/back.avif),  no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+  }
+  
+  .review .r-box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+  
+  .review .r-box{
+    width:22rem;
+    height: 22rem;
+    margin:2rem 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 .3rem .5rem #000;
+    background:#fff;
+  }
+  
