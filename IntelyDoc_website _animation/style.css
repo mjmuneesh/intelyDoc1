@@ -219,97 +219,124 @@
 
 
 /* section6 - usecasesSection */
-
-.card{
-  background: transparent;
-  width:550px;
-  height: 360px;
+#usecasesSection {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
   position: relative;
-  overflow: hidden;
-  /* color: #fff; */
+  background-color:#002233
 }
-.card img{
+ 
+#usecasesSection h1 {
+  position: relative;
+  font-size: 5rem;
+   text-align: center;
+  color: white;
+  font-weight: 700;
+    top: 33%;
+}
+
+.boxes{
+  background: transparent;
+  width: 550px;
+  height: 360px;
+  position: absolute;
+  overflow: hidden;
+}
+ 
+#finance_card {
+  left: 10%;
+  top: 80vh;
+}
+ 
+#healthcare_card {  
+  left: 50%;
+  top: 130vh;
+}
+ 
+#legal_card {
+  left: 10%;
+  top: 183vh;
+}
+ 
+#retail_card {  left: 50%;
+  top: 238vh;
+}
+ 
+#education_card {  left: 10%;
+  top: 293vh;
+}
+ 
+ 
+.boxes img {
   position: absolute;
   /* height:800px; */
-  width:100%;
-object-fit: inherit;
+  width: 100%;
+  object-fit: inherit;
 }
-.overlay_text{
+.overlay_text {
   color: #fff;
-  height:100%;
+  height: 100%;
   width: 100%;
   position: absolute;
-  bottom:-140%; 
+  bottom: -140%;
   left: 0;
   padding: 3rem 2rem;
-  transition:.4s linear;
+  transition: 0.4s linear;
 }
-.overlay_title{
-color: #fff;
-height:100%;
-width: 100%;
-position: absolute;
-bottom:-40%;
-padding: 3rem 2rem;
-transition:.4s linear;
+.overlay_title {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: -40%;
+  padding: 3rem 2rem;
+  transition: 0.4s linear;
 }
-
-.card:hover .overlay_title{
-bottom:100%;
+ 
+.boxes:hover .overlay_title {
+  bottom: 100%;
 }
-.card_pare{
-position: absolute;
-bottom: 0;
+.card_pare {
+  position: absolute;
+  bottom: 0;
 }
-.card:hover .overlay_text{
-bottom:0%;
+.boxes:hover .overlay_text {
+  bottom: 0%;
 }
-
-.retail{
-background-color: #197976;
+ 
+.finance {
+  background-color: #3a7252;
+  right:0 ;
 }
-
-.finance{
-background-color: #3a7252;
+ 
+.healthcare {
+  background-color: #533a72;
 }
-.healthcare{
-background-color: #533a72;
+ 
+.legal {
+  background-color: #72503a;
 }
-.legal{
-background-color: #72503a;
+ 
+.retail {
+  background-color: #197976;
 }
-.education{
-background-color: #3a4b72;
+ 
+.education {
+  background-color: #3a4b72;
 }
-
-.usecasesSection{
-background-color: var(--background_dark);
-color: #fff;
+ 
+ 
+.application_title {
+  /* font-size: 16px; */
+  font-weight: 600;
 }
-
-.application_title{
-/* font-size: 16px; */
-font-weight: 600;
+.point1 {
+  margin-bottom: 6px;
 }
-.point1{
-margin-bottom: 6px;
-
-}
-.points{
-font-weight: 700;
-padding-bottom: 1rem;
-}
-
-.use_line{
-width: 100%;
-height: 70vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.use_line h1{
-font-size: 5rem;
-font-weight: 700;
+.points {
+  font-weight: 700;
+  padding-bottom: 1rem;
 }
 
 
